@@ -9,16 +9,30 @@
 #include "utilerias.h"
 
 int main() {
-    // Variables (siempre inicializadas)
-    // TODO: ¿cuántas necesitas? ¿De qué tipo? ¿Necesitas alguna además de los tres números?
+    int numero1 = 0;
+    int numero2 = 0;
+    int numero3 = 0;
+    int resultado = 0;
 
     // Paso 1: mensaje de bienvenida
-    // TODO
+    std::cout << "Bienvenido, ingrese 3 numeros" << std::endl;
 
-    // TODO: el resto de tu receta, paso por paso.
-    //       ¿Tu decisión necesita una cadena if / else if / else o varios if independientes?
-    //       ¿Qué pasa con tu código si dos números son iguales?
+    // Paso 2: leer los tres valores
+    numero1 = leerEntero("Ingresa el primer numero: ");
+    numero2 = leerEntero("Ingresa el segundo numero: ");
+    numero3 = leerEntero("Ingresa el tercer numero: ");
 
-    // ¿Qué significa return 0;?
+    // Paso 3: comparar y decidir cuál es el mayor
+    if (numero1 >= numero2 && numero1 >= numero3) {
+        resultado = numero1;
+    } else if (numero2 >= numero1 && numero2 >= numero3) {
+        resultado = numero2;
+    } else {
+        resultado = numero3;
+    }
+
+    // Paso 4: mostrar el resultado
+    std::cout << "El mayor es: " << resultado << std::endl;
+
     return 0;
 }
